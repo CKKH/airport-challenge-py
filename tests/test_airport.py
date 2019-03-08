@@ -1,4 +1,5 @@
 import unittest
+from mock import Mock
 from src.airport import Airport
 
 class TestAirport(unittest.TestCase):
@@ -6,8 +7,9 @@ class TestAirport(unittest.TestCase):
         """ Dummy test to ensure unittest functioning """
 
         airport = Airport()
-        result = airport.hello_world()
-        self.assertEqual(result, 'hello, world')
+        plane = Mock(return_value='Plane')
+        result = airport.land(plane)
+        self.assertEqual(result, plane)
 
 if __name__ == "__main__":
     unittest.main()
