@@ -4,19 +4,19 @@ from src.airport import Airport
 
 class TestAirport(unittest.TestCase):
 
+    def setUp(self):
+        self.airport = Airport()
+        self.plane = Mock(return_value='Plane')
+
     def test_land_plane_stores_plane_in_array(self):
-        airport = Airport()
-        plane = Mock(return_value='Plane')
-        airport.land(plane)
-        result = airport.hanger
-        self.assertEqual(result, [plane])
+        self.airport.land(self.plane)
+        result = self.airport.hanger
+        self.assertEqual(result, [self.plane])
 
     def test_take_off_stores_plane_in_array(self):
-        airport = Airport()
-        plane = Mock(return_value='Plane')
-        airport.land(plane)
-        airport.take_off(plane)
-        result = airport.hanger
+        self.airport.land(self.plane)
+        self.airport.take_off(self.plane)
+        result = self.airport.hanger
         self.assertEqual(result, [])
 
 if __name__ == "__main__":
