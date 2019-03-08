@@ -1,0 +1,4 @@
+src/__pycache__/*
+tests/__pycache__/*
+src/docking_station.py
+tests/test_docking_station.py
