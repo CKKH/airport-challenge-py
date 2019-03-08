@@ -7,3 +7,6 @@ class Airport:
 
     def land(self, plane):
         return self.hanger.append(plane)
+
+    def take_off(self, plane):
+        return self.hanger.remove(plane)
