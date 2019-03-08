@@ -10,14 +10,12 @@ class TestAirport(unittest.TestCase):
 
     def test_land_plane_stores_plane_in_array(self):
         self.airport.land(self.plane)
-        result = self.airport.hanger
-        self.assertEqual(result, [self.plane])
+        self.assertEqual(self.airport.hanger, [self.plane])
 
     def test_take_off_stores_plane_in_array(self):
         self.airport.land(self.plane)
         self.airport.take_off(self.plane)
-        result = self.airport.hanger
-        self.assertEqual(result, [])
+        self.assertEqual(self.airport.hanger, [])
 
 if __name__ == "__main__":
     unittest.main()
