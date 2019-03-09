@@ -19,11 +19,11 @@ class TestAirport(unittest.TestCase):
         self.airport.land(self.plane_two)
         self.assertEqual(self.airport.land(self.plane_three), "Cannot land plane: hanger full")
 
-    def test_land_plane_raises_error_if_plane_already_landed(self):
+    def test_land_plane_raises_error_if_plane_grounded(self):
         self.plane.grounded = True
         self.assertEqual(self.airport.land(self.plane), "Cannot land plane: plane already landed")
 
-    def test_take_off_removes_plane_in_array(self):
+    def test_take_off_removes_plane_from_hanger(self):
         self.airport.take_off(self.plane)
         self.assertEqual(self.airport.hanger, [])
 
