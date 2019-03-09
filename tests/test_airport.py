@@ -17,10 +17,13 @@ class TestAirport(unittest.TestCase):
         self.airport.land(self.plane)
         self.assertEqual(self.airport.land(self.plane_two), "Cannot land plane: hanger full")
 
-    def test_take_off_stores_plane_in_array(self):
+    def test_take_off_removes_plane_in_array(self):
         self.airport.land(self.plane)
         self.airport.take_off(self.plane)
         self.assertEqual(self.airport.hanger, [])
+
+    def test_take_off_raises_error_if_hanger_empty(self):
+        self.assertEqual(self.airport.take_off(self.plane), "Cannot take off: hanger empty")
 
 if __name__ == "__main__":
     unittest.main()
