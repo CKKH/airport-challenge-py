@@ -5,3 +5,6 @@ class Plane:
 
     def land(self):
         self.grounded = True
+
+    def take_off(self):
+        self.grounded = False
