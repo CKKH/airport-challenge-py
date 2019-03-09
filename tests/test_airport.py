@@ -1,6 +1,8 @@
 import unittest
-from mock import Mock
+# from unittest.mock import patch
+from mock import Mock, patch
 from src.airport import Airport
+from src.plane import Plane
 
 class TestAirport(unittest.TestCase):
 
@@ -20,8 +22,9 @@ class TestAirport(unittest.TestCase):
         self.assertEqual(self.airport.land(self.plane_three), "Cannot land plane: hanger full")
 
     def test_land_plane_raises_error_if_plane_already_landed(self):
-        self.airport.land(self.plane)
-        self.assertEqual(self.airport.land(self.plane), "Cannot land plane: plane already landed")
+        plane = Plane()
+        self.airport.land(plane)
+        self.assertEqual(self.airport.land(plane), "Cannot land plane: plane already landed")
 
     def test_take_off_removes_plane_in_array(self):
         self.airport.land(self.plane)

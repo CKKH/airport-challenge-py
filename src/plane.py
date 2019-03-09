@@ -1,7 +1,7 @@
 class Plane:
 
     def __init__(self):
-        self.status = 'Flying'
+        self.grounded = False
 
     def land(self):
-        self.status = 'Grounded'
+        self.grounded = True
