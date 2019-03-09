@@ -1,6 +1,8 @@
+from src.plane import Plane
+
 class Airport:
 
-    hanger_capacity = 1
+    hanger_capacity = 2
 
     def __init__(self):
         self.hanger = []

@@ -14,8 +14,14 @@ class TestAirport(unittest.TestCase):
 
     def test_land_plane_raises_error_if_hanger_full(self):
         self.plane_two = Mock(return_value='Plane Two')
+        self.plane_three = Mock(return_value='Plane Three')
         self.airport.land(self.plane)
-        self.assertEqual(self.airport.land(self.plane_two), "Cannot land plane: hanger full")
+        self.airport.land(self.plane_two)
+        self.assertEqual(self.airport.land(self.plane_three), "Cannot land plane: hanger full")
+
+    def test_land_plane_raises_error_if_plane_already_landed(self):
+        self.airport.land(self.plane)
+        self.assertEqual(self.airport.land(self.plane), "Cannot land plane: plane already landed")
 
     def test_take_off_removes_plane_in_array(self):
         self.airport.land(self.plane)
