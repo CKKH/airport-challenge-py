@@ -1,10 +1,12 @@
 class Airport:
 
+    hanger_capacity = 1
+
     def __init__(self):
         self.hanger = []
 
     def land(self, plane):
-        if len(self.hanger) == 1:
+        if len(self.hanger) == Airport.hanger_capacity:
             return 'Cannot land plane: hanger full'
         else:
             return self.hanger.append(plane)
