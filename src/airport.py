@@ -17,7 +17,10 @@ class Airport:
             return self.hanger.append(plane)
 
     def take_off(self, plane):
+        if plane.grounded == False:
+            return 'Cannot take off: plane not grounded'
         if len(self.hanger) == 0:
             return 'Cannot take off: hanger empty'
         else:
+            plane.take_off()
             return self.hanger.remove(plane)
