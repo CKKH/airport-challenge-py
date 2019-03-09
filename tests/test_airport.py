@@ -1,6 +1,5 @@
 import unittest
-# from unittest.mock import patch
-from mock import Mock, patch
+from mock import Mock
 from src.airport import Airport
 from src.plane import Plane
 

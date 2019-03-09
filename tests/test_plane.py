@@ -3,13 +3,14 @@ from src.plane import Plane
 
 class TestPlane(unittest.TestCase):
 
+    def setUp(self):
+        self.plane = Plane()
+
     def test_land_returns_true(self):
-        plane = Plane()
-        plane.land()
-        self.assertEqual(plane.grounded, True)
+        self.plane.land()
+        self.assertEqual(self.plane.grounded, True)
 
     def test_take_off_returns_false(self):
-        plane = Plane()
-        plane.land()
-        plane.take_off()
-        self.assertEqual(plane.grounded, False)
+        self.plane.land()
+        self.plane.take_off()
+        self.assertEqual(self.plane.grounded, False)
