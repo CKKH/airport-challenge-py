@@ -27,6 +27,9 @@ class TestAirport(unittest.TestCase):
         self.airport.take_off(self.plane)
         self.assertEqual(self.airport.hanger, [])
 
+    def test_take_off_returns_plane(self):
+        self.assertEqual(self.airport.take_off(self.plane), self.plane)
+
     def test_take_off_raises_error_if_plane_not_grounded(self):
         self.plane_two.grounded = False
         self.assertEqual(self.airport.take_off(self.plane_two), "Cannot take off: plane not grounded")

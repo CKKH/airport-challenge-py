@@ -20,6 +20,7 @@ class Airport:
     def _take_off_if_plane_at_airport(self, plane):
         if plane in self.hanger:
             plane.take_off()
-            return self.hanger.remove(plane)
+            self.hanger.remove(plane)
+            return plane
         else:
             return 'Cannot take off: plane not grounded at this airport'
