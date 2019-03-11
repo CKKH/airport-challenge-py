@@ -14,7 +14,7 @@ class Airport:
         return self.hanger.append(plane)
 
     def take_off(self, plane):
-        if plane.grounded is False: return 'Cannot take off: plane not grounded'
+        if plane.grounded is False: raise TypeError('Cannot take off: plane not grounded')
         return self._take_off_if_plane_at_airport(plane)
 
     def _take_off_if_plane_at_airport(self, plane):
