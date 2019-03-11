@@ -16,8 +16,7 @@ class Plane:
     def take_off(self):
         ''' Sets grounded status to False if grounded '''
 
-        if not self.grounded:
-            raise TypeError('Cannot take off: plane not grounded')
+        self._raise_error_if_plane_not_grounded()
         self.grounded = False
 
     # Private
@@ -27,3 +26,9 @@ class Plane:
 
         if self.grounded:
             raise TypeError('Cannot land plane: plane already landed')
+
+    def _raise_error_if_plane_not_grounded(self):
+        ''' Stops plane taking off if flying '''
+
+        if not self.grounded:
+            raise TypeError('Cannot take off: plane not grounded')
