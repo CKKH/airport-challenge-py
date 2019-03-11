@@ -8,13 +8,13 @@ class Airport:
         self.hanger = []
 
     def land(self, plane):
-        if plane.grounded == True: return 'Cannot land plane: plane already landed'
+        if plane.grounded is True: return 'Cannot land plane: plane already landed'
         if len(self.hanger) >= Airport.hanger_capacity: return 'Cannot land plane: hanger full'
         plane.land()
         return self.hanger.append(plane)
 
     def take_off(self, plane):
-        if plane.grounded == False: return 'Cannot take off: plane not grounded'
+        if plane.grounded is False: return 'Cannot take off: plane not grounded'
         return self._take_off_if_plane_at_airport(plane)
 
     def _take_off_if_plane_at_airport(self, plane):
