@@ -23,4 +23,4 @@ class Airport:
             self.hanger.remove(plane)
             return plane
         else:
-            return 'Cannot take off: plane not grounded at this airport'
+            raise TypeError('Cannot take off: plane not grounded at this airport')

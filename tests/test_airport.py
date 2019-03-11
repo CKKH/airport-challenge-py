@@ -37,7 +37,7 @@ class TestAirport(unittest.TestCase):
     def test_take_off_raises_error_if_plane_not_grounded_at_that_airport(self):
         airport_2 = Airport()
         airport_2.land(self.plane_two)
-        self.assertEqual(self.airport.take_off(self.plane_two), "Cannot take off: plane not grounded at this airport")
+        self.assertRaises(TypeError, self.airport.take_off, self.plane_two)
 
 if __name__ == "__main__":
     unittest.main()
