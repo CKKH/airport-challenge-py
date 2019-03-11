@@ -17,7 +17,7 @@ class TestAirport(unittest.TestCase):
 
     def test_land_plane_raises_error_if_hanger_full(self):
         self.airport.land(self.plane_two)
-        self.assertEqual(self.airport.land(self.plane_three), "Cannot land plane: hanger full")
+        self.assertRaises(TypeError, self.airport.land, self.plane)
 
     def test_land_plane_raises_error_if_plane_grounded(self):
         self.plane.grounded = True
