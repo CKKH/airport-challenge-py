@@ -9,7 +9,6 @@ class Airport:
 
     def land(self, plane):
         plane.land()
-        if plane.grounded is True: raise TypeError('Cannot land plane: plane already landed')
         if len(self.hanger) >= Airport.hanger_capacity: raise TypeError('Cannot land plane: hanger full')
         return self.hanger.append(plane)
 
