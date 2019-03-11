@@ -8,4 +8,5 @@ class Plane:
         self.grounded = True
 
     def take_off(self):
+        if not self.grounded: raise TypeError('Cannot take off: plane not grounded')
         self.grounded = False

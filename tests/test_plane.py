@@ -13,3 +13,7 @@ class TestPlane(unittest.TestCase):
     def test_take_off_returns_false(self):
         self.plane.take_off()
         self.assertEqual(self.plane.grounded, False)
+
+    def test_take_off_raises_error_if_not_grounded(self):
+        self.plane.take_off()
+        self.assertRaises(TypeError, self.plane.take_off)
