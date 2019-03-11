@@ -4,7 +4,7 @@ class Plane:
         self.grounded = False
 
     def land(self):
-        # if self.grounded is True: raise TypeError('Cannot land plane: plane already landed')
+        if self.grounded: raise TypeError('Cannot land plane: plane already landed')
         self.grounded = True
 
     def take_off(self):
