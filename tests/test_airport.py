@@ -3,6 +3,7 @@ from mock import Mock
 from src.airport import Airport
 from src.plane import Plane
 
+
 class TestAirport(unittest.TestCase):
 
     def setUp(self):
@@ -27,6 +28,7 @@ class TestAirport(unittest.TestCase):
         airport_2 = Airport()
         airport_2.land(self.plane_two)
         self.assertRaises(TypeError, self.airport.take_off, self.plane_two)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,6 +1,7 @@
 import unittest
 from src.plane import Plane
 
+
 class TestPlane(unittest.TestCase):
 
     def setUp(self):
@@ -20,6 +21,7 @@ class TestPlane(unittest.TestCase):
     def test_take_off_raises_error_if_plane_not_grounded(self):
         self.plane.take_off()
         self.assertRaises(TypeError, self.plane.take_off)
+
 
 if __name__ == "__main__":
     unittest.main()
