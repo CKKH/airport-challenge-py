@@ -11,9 +11,9 @@ class Airport:
     def land(self, plane):
         ''' Lands planes in hanger if conditions met '''
 
-        plane.land()
         self._check_hanger_full()
         self._add_plane_to_hanger(plane)
+        plane.land()
 
     def take_off(self, plane):
         ''' Takes planes off if conditions met '''
