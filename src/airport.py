@@ -12,15 +12,22 @@ class Airport:
         ''' Lands planes in hanger if conditions met '''
 
         plane.land()
-        if len(self.hanger) >= Airport.hanger_capacity:
-            raise TypeError('Cannot land plane: hanger full')
-        return self._add_plane_to_hanger(plane)
+        self._check_hanger_full()
+        self._add_plane_to_hanger(plane)
 
     def take_off(self, plane):
         ''' Takes planes off if conditions met '''
 
-        return self._remove_plane_from_hanger_if_at_airport(plane)
+        self._remove_plane_from_hanger_if_at_airport(plane)
         plane.take_off()
+
+    # Private
+
+    def _check_hanger_full(self):
+        ''' Stops plane landing if hanger full '''
+
+        if len(self.hanger) >= Airport.hanger_capacity:
+            raise TypeError('Cannot land plane: hanger full')
 
     def _add_plane_to_hanger(self, plane):
         ''' Appends planes to hanger '''
