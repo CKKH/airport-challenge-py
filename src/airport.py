@@ -27,8 +27,8 @@ class Airport:
         stormy = self.forecast()
         if stormy:
             raise TypeError('Cannot take off: weather is stormy')
-        self._remove_plane_from_hanger_if_at_airport(plane)
         plane.take_off()
+        self._remove_plane_from_hanger_if_at_airport(plane)
 
     # Private
 
