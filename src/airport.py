@@ -1,3 +1,5 @@
+from src.weather import Weather
+
 ''' Airport module '''
 
 class Airport:
@@ -5,12 +7,14 @@ class Airport:
 
     hanger_capacity = 2
 
-    def __init__(self):
+    def __init__(self, weather=Weather()):
         self.hanger = []
+        self.weather = weather
 
     def land(self, plane):
         ''' Lands planes in hanger if conditions met '''
-
+        stormy = self.forecast()
+        if stormy: raise TypeError('Cannot land plane: weather is stormy')
         self._check_hanger_full()
         self._add_plane_to_hanger(plane)
         plane.land()
@@ -42,3 +46,6 @@ class Airport:
         else:
             raise TypeError(
                 'Cannot take off: plane not grounded at this airport')
+
+    def forecast(self):
+        return self.weather.check_stormy()
