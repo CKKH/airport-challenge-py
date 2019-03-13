@@ -18,5 +18,6 @@ class TestWeather(unittest.TestCase):
             mock_weather.return_value = (False)
             self.assertIs(self.weather.check_stormy(), False)
 
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,10 +1,16 @@
-import random 
-
 ''' Weather module '''
 
+import random
+
+
 class Weather:
+    ''' Creates weather '''
+
     def __init__(self):
         pass
 
-    def check_stormy(self):
+    @classmethod
+    def check_stormy(cls):
+        ''' Returns stormy as True '''
+
         return random.choice([True, False, False])
