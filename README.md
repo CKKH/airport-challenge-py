@@ -15,11 +15,9 @@ be tested in isolation.
 ### Dependancies
 ----------------
 
-Python3 is recommended to run this program. To check your python3 version:
+Python3 is recommended to run this program. To check your python3 version run `python3 -V`. You will see the output `Python 3.7.x` if python3 is installed.
 
-Run `python3 -V`. You will see the output `Python 3.7.x` if python3 is installed.
-
-If you do not have `python 3.7`, please install it. The guides from DigetalOcean are recommended for this. The following are some examples but you may need to find the guide relavant to your computer's exact operating system:
+If you do not have `python 3.7`, please install it. The guides from DigitalOcean are recommended for this. The following are some examples but you may need to find the guide relavant to your computer's exact operating system:
 
 - [Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-18-04)
 - [macOS](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-macos)
@@ -39,7 +37,7 @@ To do this:
 ### Clone & build dependancies
 ------------------------------
 
-From your termainal, navigate to a suitable installation location (e.g. A project directory) and input the following commands:
+From your termainal, navigate to a suitable installation location (e.g. a project directory) and input the following commands:
 
 1. Clone the repository `git@github.com:CKKH/airport-challenge-py.git`
 2. Change directory `cd airport-challenge-py`
