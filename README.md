@@ -6,6 +6,9 @@
 Using Python and Unittest to TDD a a simple program inspired by the [airport
 challenge](https://github.com/makersacademy/airport_challenge).
 
+My aim with this project was to test drive the code, and ensure that each class
+be tested in isolation.
+
 ## Requirements & Running
 -------------------------
 
@@ -62,7 +65,11 @@ following commands:
 ---------
 
 To run the test suite, run `python -m unittest tests/*.py` from the directory's
-root
+root.
+
+All classes are tested in isolation.
+
+![Imgur](https://i.imgur.com/g77qmXJ.png?1)
 
 ### Deactivating virtual environment
 ------------------------------------
@@ -105,6 +112,14 @@ Instructing a plane to land when its grounded will return an error
 As an air traffic controller 
 To ensure safety 
 Instructing a plane to take off when it is flying will return an error
+
+As an air traffic controller 
+To ensure safety 
+Instructing a plane to land when the weather is stormy will return an error
+
+As an air traffic controller 
+To ensure safety 
+Instructing a plane to take off when the weather is stormy will return an error
 
 As the system designer
 So that the software can be used for many different airports

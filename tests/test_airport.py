@@ -42,7 +42,6 @@ class TestAirport(unittest.TestCase):
         with mock.patch.object(self.airport, 'forecast') as mock_forecast:
             mock_forecast.return_value = (False)
             self.airport.land(self.plane)
-            self.assertEqual(self.airport.hanger, [self.plane])
             mock_forecast.return_value = (True)
             self.assertRaises(TypeError, self.airport.take_off, self.plane)
 
