@@ -2,7 +2,6 @@ import unittest
 from mock import Mock
 import mock
 from src.airport import Airport
-from src.plane import Plane
 
 
 class TestAirport(unittest.TestCase):
