@@ -49,10 +49,9 @@ From your termainal, navigate to a suitable installation location (e.g. a projec
 
 To run the project open `python` in the directory's root. The following are the
 basic commands you will need.
-following commands:
 
 1. `from src.airport import Airport` to import the Airport module.
-2. `from src.plane import Plane` to impport the Plane module.
+2. `from src.plane import Plane` to import the Plane module.
 3. `airport = Airport()` for creating airports.
 4. `plane = Plane()` for creating planes.
 5. `airport.land(plane)` for landing planes.
